@@ -40,4 +40,7 @@ describe('Roman Number Generator', () => {
   test('should generate IX for 9', () => {
     expect(generate(9)).toBe('IX');
   });
+  test('should generate X for 10', () => {
+    expect(generate(10)).toBe('X');
+  });
 });
