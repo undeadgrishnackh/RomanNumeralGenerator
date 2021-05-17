@@ -5,12 +5,13 @@ const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
 function generateUnits(number) {
-  // eslint-disable-next-line default-case
   switch (number) {
     case 1:
     case 2:
     case 3:
       return `${'I'.repeat(number)}`;
+
+    // no default
   }
 }
 
