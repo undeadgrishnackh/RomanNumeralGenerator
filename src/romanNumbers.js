@@ -18,6 +18,8 @@ function generateUnits(number) {
       return 'VI';
     case 7:
       return 'VII';
+    case 8:
+      return 'VIII';
     // no default
   }
 }
