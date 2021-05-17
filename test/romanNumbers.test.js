@@ -43,6 +43,12 @@ describe('Roman Number Generator', () => {
   test('should generate X for 10', () => {
     expect(generate(10)).toBe('X');
   });
+  test('should generate L for 50', () => {
+    expect(generate(50)).toBe('L');
+  });
+  test('should generate IC for 99', () => {
+    expect(generate(99)).toBe('XCIX');
+  });
 });
 
 describe('E2E tests', () => {
@@ -51,5 +57,8 @@ describe('E2E tests', () => {
   });
   test('should generate XXII for 22', () => {
     expect(generate(22)).toBe('XXII');
+  });
+  test('should generate LIII for 53', () => {
+    expect(generate(53)).toBe('LIII');
   });
 });
