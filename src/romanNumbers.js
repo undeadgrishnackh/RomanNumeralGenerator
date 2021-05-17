@@ -4,24 +4,27 @@ const isNotAnInteger = (number) => !Number.isInteger(number);
 const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
+//! ! TODO: this part is too complex and not so readable in both cases switch & ifs
+//! ! map and actions should be a nice exploratory exercise.
 const generateSingularItem = (number, atomicUnit, midUnit, maxUnit) => {
-  switch (number) {
-    case 0:
-      return '';
-    case 1:
-    case 2:
-    case 3:
-      return `${atomicUnit.repeat(number)}`;
-    case 4:
-      return atomicUnit + midUnit;
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-      return midUnit.concat(`${atomicUnit.repeat(number - 5)}`);
-    case 9:
-      return atomicUnit + maxUnit;
-    // no default
+  if (number === 0) {
+    return '';
+  }
+
+  if (number === 1 || number === 2 || number === 3) {
+    return `${atomicUnit.repeat(number)}`;
+  }
+
+  if (number === 4) {
+    return atomicUnit + midUnit;
+  }
+
+  if (number === 5 || number === 6 || number === 7 || number === 8) {
+    return midUnit.concat(`${atomicUnit.repeat(number - 5)}`);
+  }
+
+  if (number === 9) {
+    return atomicUnit + maxUnit;
   }
 };
 
