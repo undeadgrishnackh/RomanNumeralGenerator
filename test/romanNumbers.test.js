@@ -44,3 +44,12 @@ describe('Roman Number Generator', () => {
     expect(generate(10)).toBe('X');
   });
 });
+
+describe('E2E tests', () => {
+  test('should generate XI for 11', () => {
+    expect(generate(11)).toBe('XI');
+  });
+  test('should generate XXII for 22', () => {
+    expect(generate(22)).toBe('XXII');
+  });
+});
