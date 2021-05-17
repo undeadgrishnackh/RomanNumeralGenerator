@@ -17,6 +17,8 @@ function generateUnits(number) {
     case 7:
     case 8:
       return 'V'.concat(`${'I'.repeat(number - 5)}`);
+    case 9:
+      return 'IX';
     // no default
   }
 }
