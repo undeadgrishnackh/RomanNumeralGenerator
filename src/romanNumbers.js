@@ -4,10 +4,19 @@ const isNotAnInteger = (number) => !Number.isInteger(number);
 const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
+function generateUnits(number) {
+  // eslint-disable-next-line default-case
+  switch (number) {
+    case 1:
+      return 'I';
+    case 2:
+      return 'II';
+  }
+}
+
 function generate(number) {
   if (wrongNumber(number)) return 'ERROR';
-
-  if (number === 1) return 'I';
+  return generateUnits(number);
 }
 
 module.exports = generate;
