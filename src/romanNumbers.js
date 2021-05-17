@@ -10,7 +10,8 @@ function generateUnits(number) {
     case 2:
     case 3:
       return `${'I'.repeat(number)}`;
-
+    case 4:
+      return 'IV';
     // no default
   }
 }
