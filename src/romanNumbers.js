@@ -4,8 +4,13 @@ const isNotAnInteger = (number) => !Number.isInteger(number);
 const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
+const getTheUnits = (number) => number % 10;
+const getTheTens = (number) => Math.floor(number / 10) % 10;
+
 function generateUnits(number) {
   switch (number) {
+    case 0:
+      return '';
     case 1:
     case 2:
     case 3:
@@ -23,9 +28,19 @@ function generateUnits(number) {
   }
 }
 
+function generateTens(number) {
+  switch (number) {
+    case 0:
+      return '';
+    case 1:
+      return 'X';
+    // no default
+  }
+}
+
 function generate(number) {
   if (wrongNumber(number)) return 'ERROR';
-  return generateUnits(number);
+  return generateTens(getTheTens(number)).concat(generateUnits(getTheUnits(number)));
 }
 
 module.exports = generate;
