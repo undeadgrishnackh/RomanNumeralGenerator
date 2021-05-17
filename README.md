@@ -14,4 +14,7 @@ Pomodoro I 🍅
  - ✅ reject not numbers
  - ✅ reject negative
  - ✅ reject > 3999
+- 1 === I
+
+Pomodoro II 🍅
 - number splitter (units, tens, hundreds, thousands)
