@@ -5,7 +5,7 @@ const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
 //! ! TODO: this part is too complex and not so readable in both cases switch & ifs
-//! ! map and actions should be a nice exploratory phase
+//! ! map and actions should be a nice  exploratory phase
 const generateSingularItem = (number, atomicUnit, midUnit, maxUnit) => {
   if (number === 0) {
     return '';
