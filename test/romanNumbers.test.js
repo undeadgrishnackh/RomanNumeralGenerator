@@ -49,6 +49,18 @@ describe('Roman Number Generator', () => {
   test('should generate IC for 99', () => {
     expect(generate(99)).toBe('XCIX');
   });
+  test('should generate C for 100', () => {
+    expect(generate(100)).toBe('C');
+  });
+  test('should generate D for 500', () => {
+    expect(generate(500)).toBe('D');
+  });
+  test('should generate CM for 900', () => {
+    expect(generate(900)).toBe('CM');
+  });
+  test('should generate M for 1000', () => {
+    expect(generate(1000)).toBe('M');
+  });
 });
 
 describe('E2E tests', () => {
@@ -60,5 +72,11 @@ describe('E2E tests', () => {
   });
   test('should generate LIII for 53', () => {
     expect(generate(53)).toBe('LIII');
+  });
+  test('should generate CLIII for 53', () => {
+    expect(generate(153)).toBe('CLIII');
+  });
+  test('should generate MMMCMXCIX for 3999', () => {
+    expect(generate(3999)).toBe('MMMCMXCIX');
   });
 });

@@ -4,9 +4,6 @@ const isNotAnInteger = (number) => !Number.isInteger(number);
 const wrongNumber = (number) =>
   isNotAnInteger(number) || isNegativeNumber(number) || isGreaterThan3999(number);
 
-const getTheUnits = (number) => number % 10;
-const getTheTens = (number) => Math.floor(number / 10) % 10;
-
 const generateSingularItem = (number, atomicUnit, midUnit, maxUnit) => {
   switch (number) {
     case 0:
@@ -28,16 +25,31 @@ const generateSingularItem = (number, atomicUnit, midUnit, maxUnit) => {
   }
 };
 
+const getTheUnits = (number) => number % 10;
 const generateUnits = (number) => generateSingularItem(number, 'I', 'V', 'X');
-const generateTens = (number) => generateSingularItem(number, 'X', 'L', 'C');
-
 const getRomanNumberForUnits = (number) => generateUnits(getTheUnits(number));
+
+const getTheTens = (number) => Math.floor(number / 10) % 10;
+const generateTens = (number) => generateSingularItem(number, 'X', 'L', 'C');
 const getRomanNumberForTens = (number) => generateTens(getTheTens(number));
+
+const getTheHundreds = (number) => Math.floor(number / 100) % 10;
+const generateHundreds = (number) => generateSingularItem(number, 'C', 'D', 'M');
+const generateThousands = (number) => generateSingularItem(number, 'M', '', '');
+
+const getThousands = (number) => Math.floor(number / 1000) % 10;
+const getRomanNumberForHundreds = (number) => generateHundreds(getTheHundreds(number));
+const getRomanNumberForThousands = (number) => generateThousands(getThousands(number));
 
 // ! Public function ------------------------------------------------------
 function generate(number) {
   if (wrongNumber(number)) return 'ERROR';
-  return getRomanNumberForTens(number) + getRomanNumberForUnits(number);
+  return (
+    getRomanNumberForThousands(number) +
+    getRomanNumberForHundreds(number) +
+    getRomanNumberForTens(number) +
+    getRomanNumberForUnits(number)
+  );
 }
 
 module.exports = generate;
