@@ -7,7 +7,7 @@ const wrongNumber = (number) =>
 const getTheUnits = (number) => number % 10;
 const getTheTens = (number) => Math.floor(number / 10) % 10;
 
-function generateSingularItem(number, atomicUnit, midUnit, maxUnit) {
+const generateSingularItem = (number, atomicUnit, midUnit, maxUnit) => {
   switch (number) {
     case 0:
       return '';
@@ -26,19 +26,18 @@ function generateSingularItem(number, atomicUnit, midUnit, maxUnit) {
       return atomicUnit + maxUnit;
     // no default
   }
-}
+};
 
-function generateUnits(number) {
-  return generateSingularItem(number, 'I', 'V', 'X');
-}
+const generateUnits = (number) => generateSingularItem(number, 'I', 'V', 'X');
+const generateTens = (number) => generateSingularItem(number, 'X', 'L', 'C');
 
-function generateTens(number) {
-  return generateSingularItem(number, 'X', 'L', 'C');
-}
+const getRomanNumberForUnits = (number) => generateUnits(getTheUnits(number));
+const getRomanNumberForTens = (number) => generateTens(getTheTens(number));
 
+// ! Public function ------------------------------------------------------
 function generate(number) {
   if (wrongNumber(number)) return 'ERROR';
-  return generateTens(getTheTens(number)).concat(generateUnits(getTheUnits(number)));
+  return getRomanNumberForTens(number) + getRomanNumberForUnits(number);
 }
 
 module.exports = generate;
