@@ -7,4 +7,7 @@ describe('Function Interface', () => {
   test('should reject numbers greater than 3999', () => {
     expect(generate(4000)).toBe('ERROR');
   });
+  test('should reject NOT integers', () => {
+    expect(generate('abcd')).toBe('ERROR');
+  });
 });

@@ -12,6 +12,6 @@ Pomodoro I 🍅
 - project jump-start
 - guardians
  - reject not numbers
- - reject negative
- - reject > 3999
+ - ✅ reject negative
+ - ✅ reject > 3999
 - number splitter (units, tens, hundreds, thousands)
