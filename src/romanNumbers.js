@@ -8,11 +8,9 @@ function generateUnits(number) {
   // eslint-disable-next-line default-case
   switch (number) {
     case 1:
-      return 'I';
     case 2:
-      return 'II';
     case 3:
-      return 'III';
+      return `${'I'.repeat(number)}`;
   }
 }
 
