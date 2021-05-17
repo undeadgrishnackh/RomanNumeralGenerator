@@ -6,6 +6,8 @@ const wrongNumber = (number) =>
 
 function generate(number) {
   if (wrongNumber(number)) return 'ERROR';
+
+  if (number === 1) return 'I';
 }
 
 module.exports = generate;
