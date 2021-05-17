@@ -6,5 +6,12 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c8e046ebad254148950f6fea8f671594)](https://app.codacy.com/gh/undeadgrishnackh/RomanNumeralGenerator/dashboard)
 [![BCH compliance](https://bettercodehub.com/edge/badge/undeadgrishnackh/RomanNumeralGenerator?branch=master)](https://bettercodehub.com/)
 
-🚧 CodeScene must be configured to scan the repository. Click the badge...
-[![CodeScene System Mastery](https://codescene.io/projects/7748/status-badges/system-mastery)](https://codescene.io/projects/7748)
+Roman Numbers Generator Kata
+
+Pomodoro I 🍅
+- project jump-start
+- guardians
+ - reject not numbers
+ - reject negative
+ - reject > 3999
+- number splitter (units, tens, hundreds, thousands)
