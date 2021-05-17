@@ -34,4 +34,7 @@ describe('Roman Number Generator', () => {
   test('should generate VII for 7', () => {
     expect(generate(7)).toBe('VII');
   });
+  test('should generate VIII for 8', () => {
+    expect(generate(8)).toBe('VIII');
+  });
 });
