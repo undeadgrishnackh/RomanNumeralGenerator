@@ -14,7 +14,18 @@ Pomodoro I 🍅
  - ✅ reject not numbers
  - ✅ reject negative
  - ✅ reject > 3999
-- 1 === I
+- ✅ 1 === I
 
 Pomodoro II 🍅
-- number splitter (units, tens, hundreds, thousands)
+- number splitter: 
+ - ✅ units, 
+ - ✅ tens, 
+ - ✅ hundreds, 
+
+Pomodoro III 🍅
+- ✅ E2E tests
+- number splitter: 
+ - ✅ thousands
+
+🤔 TODO: 
+the switch to convert the single elements in ROMAN letters is too complex (17 cyclomatic - instead of something below 5). The conversion from switch to ifs is a bit more readable but still too complex and hugly (cx 15). Converting it in a map and actions should be a nice exploratory phase.
