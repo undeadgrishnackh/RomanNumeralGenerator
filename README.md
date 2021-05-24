@@ -28,4 +28,4 @@ Pomodoro III 🍅
  - ✅ thousands
 
 🤔 TODO: 
-the switch to convert the single elements in ROMAN letters is too complex (17 cyclomatic - instead of something below 5). The conversion from switch to ifs is a bit more readable but still too complex and hugly (cx 15). Converting it in a map and actions should be a nice exploratory phase.
+the switch to convert the single elements in ROMAN letters is too complex (17 cyclomatic - instead of something below 5). The conversion from switch to ifs is a bit more readable but still too complex and ugly (cx 15). Converting it into a map and actions should be a nice exploratory phase.
